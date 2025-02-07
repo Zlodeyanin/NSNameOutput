@@ -19,7 +19,8 @@ namespace NSNameOutput
             {
                 line += userSymbol;
             }
-            Console.WriteLine($"{line}\n{userSymbol}{userName}{userSymbol}\n{line}");
+
+            Console.WriteLine($"{line}\n{secondLine}\n{line}");
             Console.ReadKey();
         }
     }
