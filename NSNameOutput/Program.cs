@@ -6,23 +6,20 @@ namespace NSNameOutput
     {
         static void Main(string[] args)
         {
-            int additionalSymbolsCount = 2;
-            
+            string line = "";
+
             Console.Write("Введите желаемый символ: ");
             char userSymbol = Convert.ToChar(Console.ReadLine());
             Console.Write("Введите ваше имя: ");
             string userName = Console.ReadLine();
+            string secondLine = userSymbol + userName + userSymbol;
+            int lineLength = secondLine.Length;
 
-            for (int i = 0; i < userName.Length + additionalSymbolsCount; i++)
+            for (int i = 0; i < lineLength; i++)
             {
-                Console.Write(userSymbol);
+                line += userSymbol;
             }
-            Console.WriteLine($"\n{userSymbol}{userName}{userSymbol}");
-
-            for (int i = 0; i < userName.Length + additionalSymbolsCount; i++)
-            {
-                Console.Write(userSymbol);
-            }
+            Console.WriteLine($"{line}\n{userSymbol}{userName}{userSymbol}\n{line}");
             Console.ReadKey();
         }
     }
